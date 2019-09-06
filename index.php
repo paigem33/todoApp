@@ -1,7 +1,6 @@
 <?php
 
-echo '<h1>Apache root directory changed !</H1>';
-
+    echo 'working';
     require_once 'init.php';
     
     $itemsQuery = $connection->prepare("
@@ -9,12 +8,13 @@ echo '<h1>Apache root directory changed !</H1>';
         FROM items
         WHERE user = :user
     ");
+    echo $itemsQuery;
     
-    $itemsQuery->execute([
-            'user' => $_SESSION['user_id']
-        ]);
+    // $itemsQuery->execute([
+    //         'user' => $_SESSION['user_id']
+    //     ]);
         
-    $items = $itemsQuery->rowCount() ? $itemsQuery : [];
+    // $items = $itemsQuery->rowCount() ? $itemsQuery : [];
     
 ?>
 
