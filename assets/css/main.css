@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#inputContainer {
+    height: 100vh;
+    background-image: linear-gradient(rgba(245, 176, 171, .4), rgba(245, 176, 171,.4)), url(../images/bg-pic.jpg);
+
+}
