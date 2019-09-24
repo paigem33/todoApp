@@ -10,6 +10,11 @@ $(document).ready(function(){
         $("#register").show();
     })
 
+    $('.icon').click(function(){
+        $('nav').stop().slideToggle('slow');
+        $('.icon').toggleClass('open');
+        $('.icon i').toggleClass('fa-times');
+    });
 
 }); //end doc ready
 //TODO: toggle sign in sign up

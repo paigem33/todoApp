@@ -84,32 +84,93 @@ body {
 }
 /* MAIN CONTENT */
 /* NAV */
+header {
+    background-color: #f4ada9;
+    height: 65px;
+}
 nav {
-    background-color: #c6b3a3;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    font-size: 22px;
-    color: #fff;
-    position: fixed;
-    top: 0;
+    padding-top: 65px;
+    display: none;
 }
-.mainNav {
-    right: 0;
+nav ul {
+    list-style-type: none;
+    background-color: #f4ada9;
+    padding: 5px;
 }
-nav a {
+nav ul li {
+    padding: .5em;
+    text-align: center;
+}
+nav ul li:first-of-type {
+    border-top: solid 2px #fff;
+    padding-top: 10px;
+}
+nav ul li a, nav ul li {
     text-decoration: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.icon i {
+    font-size: 50px;
     color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 5px;;
 }
-nav a, nav p {
-    padding: 15px 10px;
+.logo p {
+    position: absolute;
+    top: 17px;
+    left: 65px;
+    color: #fff;
+    font-size: 24px;
 }
-nav i {
-    padding-right: 10px;
-    font-size: 35px;
+.logo i {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 50px;
+    color: #fff;
 }
 #mainContainer {
     background-image: linear-gradient(rgba(245, 176, 171, .5), rgba(245, 176, 171,.5)), url(../images/bg-pic.jpg);
     height: 100vh;
     font-family: 'Raleway', sans-serif;
+}
+@media only screen and (min-width: 690px){
+    .icon {
+        display: none;
+    }
+    nav {
+        display: block;
+        padding-top: 0;
+        padding-right: 20px;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 10px;
+    }
+    nav ul li:first-of-type {
+        border-top: none;
+        padding: .5em;
+    }
+    
+    .logo p, .logo i {
+        position: static;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .logo p {
+        padding-left: 10px;
+    }
 }
