@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register/Login</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -58,7 +58,11 @@
                 <label for="loginPassword">Password</label>
                 <input type="password" id="loginPassword" name="loginPassword" required>
                 <button type="submit" name="loginButton">Login</button>
-
+                <div class="formButtons">
+                <div class="hasAccount">
+                    <span id="registerForm">Don't have an account? Sign up</span>
+                </div>
+            </div>
                 
             </form>
 
@@ -88,18 +92,15 @@
                 <input type="password" id="password2" name="password2" required>
 
                 <button type="submit" name="signupButton">Sign up</button>
-
+                <div class="formButtons">
+                    <div class="hasAccount">
+                        <span id="loginForm">Already have an account? Sign in</span>
+                    </div>
+                </div>
 
             </form>
         </div>
-        <div class="formButtons">
-                <div class="hasAccount">
-                    <span id="loginForm">Sign in</span>
-                </div>
-                <div class="hasAccount">
-                    <span id="registerForm">Sign up</span>
-                </div>
-            </div>
+        
     </div>
 </body>
 </html>

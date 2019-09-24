@@ -18,16 +18,14 @@
 			}
 		}
         //register is a public function becasue it is the one we will be calling from a different file
-		public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
+		public function register($un, $em, $em2, $pw, $pw2) {
             //$this-> tells it to look at this class
 			$this->validateUsername($un);
-			$this->validateFirstName($fn);
-			$this->validateLastName($ln);
 			$this->validateEmails($em, $em2);
 			$this->validatePasswords($pw, $pw2);
 			if(empty($this->errorArray) == true) {
 				//Insert into db
-				return $this->insertUserDetails($un, $fn, $ln, $em, $pw);
+				return $this->insertUserDetails($un, $em, $pw);
 			}
 			else {
 				return false;
@@ -40,11 +38,10 @@
 			return "<span class='errorMessage'>$error</span>";
 		}
         //private means it can only be called within this class
-		private function insertUserDetails($un, $fn, $ln, $em, $pw) {
+		private function insertUserDetails($un, $em, $pw) {
 			$encryptedPw = md5($pw);
-			$profilePic = "assets/images/profile-pics/head_emerald.png";
 			$date = date("Y-m-d");
-			$result = mysqli_query($this->con, "INSERT INTO users VALUES (NULL, '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic')");
+			$result = mysqli_query($this->con, "INSERT INTO users VALUES (NULL, '$un', '$em', '$encryptedPw')");
 			return $result;
 		}
 		private function validateUsername($un) {
@@ -56,18 +53,6 @@
 			$checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username='$un'");
 			if(mysqli_num_rows($checkUsernameQuery) != 0) {
 				array_push($this->errorArray, Constants::$usernameTaken);
-				return;
-			}
-		}
-		private function validateFirstName($fn) {
-			if(strlen($fn) > 25 || strlen($fn) < 2) {
-				array_push($this->errorArray, Constants::$firstNameCharacters);
-				return;
-			}
-		}
-		private function validateLastName($ln) {
-			if(strlen($ln) > 25 || strlen($ln) < 2) {
-				array_push($this->errorArray, Constants::$lastNameCharacters);
 				return;
 			}
 		}

@@ -12,4 +12,4 @@ $(document).ready(function(){
 
 
 }); //end doc ready
-//TODO: Fix toggling active class when form submit un successful
+//TODO: toggle sign in sign up

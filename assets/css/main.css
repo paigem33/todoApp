@@ -1,9 +1,115 @@
+/* font-family: 'Shadows Into Light', cursive;
+font-family: 'Raleway', sans-serif; */
 * {
     margin: 0;
     padding: 0;
 }
+body {
+    background-image: linear-gradient(rgba(245, 176, 171, .4), rgba(245, 176, 171,.4)), url(../images/bg-pic.jpg);
+}
 #inputContainer {
     height: 100vh;
-    background-image: linear-gradient(rgba(245, 176, 171, .4), rgba(245, 176, 171,.4)), url(../images/bg-pic.jpg);
-
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-family: 'Raleway', sans-serif; 
+}
+.formSection {
+    background-color: #c5b2a2;
+    border-radius: 5px;
+    padding: 0 25px 25px;
+    margin: auto;
+    max-width: 632px;
+    -webkit-box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.5);
+}
+.formSection h1 {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: solid 5px #b7d3d2;
+    margin-bottom: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    color: #fff;
+    font-size: 40px;
+}
+#inputContainer label {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+#inputContainer input {
+    padding-left: 5px;
+    width: 98%;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    margin: 5px 0 15px;
+    background-color: rgba(255,255,255,.4);
+    color: #808080;
+}
+#inputContainer input:focus {
+    outline: none;
+}
+#inputContainer button {
+    width: 100%;
+    background-color: #f4ada9;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    color: #fff;
+    font-size: 18px;
+    margin: 5px 0 15px;
+}
+#inputContainer button:focus {
+    outline: none;
+}
+#inputContainer button:hover {
+    background-color: #f0958e;
+    cursor: pointer;
+}
+#inputContainer .formButtons {
+    color: #fff;
+}
+.errorMessage {
+    display: block;
+    padding-bottom: 3px;
+}
+.hasAccount {
+    cursor: pointer;
+}
+@media only screen and (min-width: 690px){
+    .formSection h1 {
+        font-size: 50px;
+    }
+}
+/* MAIN CONTENT */
+/* NAV */
+nav {
+    background-color: #c6b3a3;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 22px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+}
+.mainNav {
+    right: 0;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+nav a, nav p {
+    padding: 15px 10px;
+}
+nav i {
+    padding-right: 10px;
+    font-size: 35px;
+}
+#mainContainer {
+    background-image: linear-gradient(rgba(245, 176, 171, .5), rgba(245, 176, 171,.5)), url(../images/bg-pic.jpg);
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
 }
