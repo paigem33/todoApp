@@ -89,7 +89,7 @@ header {
     height: 65px;
 }
 nav {
-    padding-top: 65px;
+    padding-top: 60px;
     display: none;
 }
 nav ul {
@@ -156,7 +156,6 @@ nav ul li a, nav ul li {
         border-top: none;
         padding: .5em;
     }
-    
     .logo p, .logo i {
         position: static;
     }
