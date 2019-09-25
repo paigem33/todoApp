@@ -1,7 +1,7 @@
 <?php 
     include("includes/config.php");
     include("includes/classes/Account.php");
-
+    include("includes/handlers/login.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <?php
-                if($_SESSION['userLoggedIn']) { 
+                if(isset($_SESSION['userLoggedIn'])) { 
                 ?>
                     <li><a href="addList.php">New List</a></li>
                     <li><a href="profile.php">Profile</a></li>
